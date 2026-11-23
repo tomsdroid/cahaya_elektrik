@@ -13,3 +13,28 @@ Lahir dari kebutuhan teknis komparatif di lapangan, Cahaya Elektrik bukan sekada
 > - Memberikan pelayanan instalasi yang rapi, profesional, dan bergaransi.
 > - Menyediakan produk CCTV dan kelistrikan berkualitas dengan harga bersaing.
 > - Membangun hubungan jangka panjang dengan pelanggan melalui after-sales terbaik.
+
+## Mengelola Portofolio
+
+Setiap file `contents/*.md` menjadi satu kartu dan halaman detail portofolio. Setelah menambah atau mengubah file Markdown, jalankan generator dari folder proyek:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\build.ps1
+```
+
+Generator memperbarui `portfolio-data.js`, yang digunakan oleh halaman Beranda dan Portofolio. Markdown dapat berisi judul `#`, subjudul `##`, paragraf, daftar, kutipan, blok kode, tautan, dan gambar. Front matter di awal file bersifat opsional; `title`, `category`, dan `summary` dapat dipakai untuk mengatur judul kartu, kategori, dan ringkasan.
+
+Contoh:
+
+```markdown
+---
+title: Instalasi Jaringan Kantor
+category: Infrastruktur
+summary: Penataan jaringan untuk ruang kerja.
+---
+
+## Lingkup pekerjaan
+
+- Instalasi titik jaringan
+- Konfigurasi perangkat
+```
